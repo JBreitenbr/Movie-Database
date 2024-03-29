@@ -5,7 +5,7 @@ import {useState} from 'react';
 const Auth = () => {
   let [guestId,setGuestId] = useState("");
   let handleLogin = async () => {
-  let headers={'Authorization':'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzZjZhOWM3MzA4YTRlMzc0M2RlODkwZDJjMDcyNTNlMCIsInN1YiI6IjY2MDVhZDM5OWE5ZjlhMDE3ZTA2MWJjNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.O6q8NgqMcVjTFV5sZ_31N90wD9JaHgoVun-prWl3XV8'};
+  let headers={'Authorization':'Bearer '};
   const res=await fetch("https://api.themoviedb.org/3/authentication/guest_session/new",
 {headers});
   const data = await res.json();
